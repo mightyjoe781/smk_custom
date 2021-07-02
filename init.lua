@@ -38,6 +38,9 @@ dofile(MP.."/crafts.lua")
 -- general hacks
 dofile(MP.."/hacks.lua")
 
+-- server-reboot
+dofile(MP.."/reboot.lua")
+
 -- maptools custmization
 if minetest.get_modpath("maptools") then
 	dofile(MP.."/maptools.lua")
