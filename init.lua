@@ -62,4 +62,9 @@ if minetest.get_modpath("beacon") then
 	dofile(MP.."/fly.lua")
 end
 
+-- (optional multicraft fix)
+--
+minetest.register_on_joinplayer(function(player)
+	player:hud_set_hotbar_itemcount(9)
+end)
 print("[OK] Server_Custom")
