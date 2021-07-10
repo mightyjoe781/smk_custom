@@ -8,7 +8,7 @@ dofile(MP.."/alias.lua")
 dofile(MP.."/fix_dead_on_login.lua")
 
 -- privilages
-dofile(MP.."/privs/fly.lua")
+dofile(MP.."/privs/staff.lua")
 -- dofile(MP.."/privs/protection.lua")
 
 -- death message
@@ -41,6 +41,12 @@ dofile(MP.."/hacks.lua")
 -- server-reboot
 dofile(MP.."/reboot.lua")
 
+-- server_news
+dofile(MP.."/server_news.lua")
+
+-- rules
+dofile(MP.."/rules.lua")
+
 -- maptools custmization
 if minetest.get_modpath("maptools") then
 	dofile(MP.."/maptools.lua")
@@ -51,5 +57,9 @@ if minetest.get_modpath("bonemeal") then
 end
 if minetest.get_modpath("beacon") then
 	-- fly check
+	dofile(MP.."/privs/fly.lua")
+	-- fly check to not affect someone with player_fly privs
 	dofile(MP.."/fly.lua")
 end
+
+print("[OK] Server_Custom")
