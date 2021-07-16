@@ -62,6 +62,10 @@ if minetest.get_modpath("beacon") then
 	dofile(MP.."/fly.lua")
 end
 
+-- jail mod integration
+--
+dofile(MP.."/jail.lua")
+
 -- (optional multicraft fix)
 --
 minetest.register_on_joinplayer(function(player)
