@@ -1,4 +1,4 @@
-## prismo_custom
+## smk_custom
 
 Features(Mods) Added :
 * Server Reboot
@@ -13,6 +13,8 @@ Features(Mods) Added :
   * `/rules` : shows rules formspec to users.
   * `/notify <name>` : notifies player with rules formspec. (requires `staff` privs)
   * Doesn't require server restart to update the rules.
+* Jail
+  * Created a new priv called `jailer` that allows a player to jail other players.
 
 Hacks :
 
