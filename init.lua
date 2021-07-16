@@ -1,4 +1,4 @@
-prismo = {}
+smk = {}
 local MP = minetest.get_modpath("smk_custom")
 
 -- unknown item aliasing
