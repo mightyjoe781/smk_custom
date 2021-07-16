@@ -1,5 +1,5 @@
 prismo = {}
-local MP = minetest.get_modpath("prismo_custom")
+local MP = minetest.get_modpath("smk_custom")
 
 -- unknown item aliasing
 dofile(MP.."/alias.lua")
