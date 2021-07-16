@@ -66,6 +66,10 @@ end
 --
 dofile(MP.."/jail.lua")
 
+-- spawn mod integration
+--
+dofile(MP.."/spawn.lua")
+
 -- (optional multicraft fix)
 --
 minetest.register_on_joinplayer(function(player)
