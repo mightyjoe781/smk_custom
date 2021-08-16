@@ -63,4 +63,7 @@ end
 minetest.register_on_joinplayer(function(player)
 	player:hud_set_hotbar_itemcount(9)
 end)
+
+minetest.override_item('', {wield_image = 'wieldhand.png'})
+
 print("[OK] Server_Custom")
