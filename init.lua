@@ -1,4 +1,3 @@
-smk = {}
 local MP = minetest.get_modpath("smk_custom")
 
 -- unknown item aliasing
@@ -35,9 +34,6 @@ dofile(MP.."/recipes.lua")
 -- craft overrides
 dofile(MP.."/crafts.lua")
 
--- general hacks
-dofile(MP.."/hacks.lua")
-
 -- server-reboot
 dofile(MP.."/reboot.lua")
 
@@ -61,14 +57,6 @@ if minetest.get_modpath("beacon") then
 	-- fly check to not affect someone with player_fly privs
 	dofile(MP.."/fly.lua")
 end
-
--- jail mod integration
---
-dofile(MP.."/jail.lua")
-
--- spawn mod integration
---
-dofile(MP.."/spawn.lua")
 
 -- (optional multicraft fix)
 --
