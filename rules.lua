@@ -1,7 +1,7 @@
 
 -- create formspec from text file
 local function get_rule_formspec()
-	local rules_file = io.open(minetest.get_worldpath().."/rules.txt", "r")
+	local rules_file = io.open(minetest.get_worldpath().."/wiki/rules.txt", "r")
 	local rules_fs = 'size[12,8.25]'..
 		"button_exit[-0.05,7.8;2,1;exit;Close]"
 	if rules_file then

@@ -5,7 +5,7 @@ minetest.register_privilege("news_bypass", {
 
 -- create formspec from text file
 local function get_formspec()
-	local news_file = io.open(minetest.get_worldpath().."/news.txt", "r")
+	local news_file = io.open(minetest.get_worldpath().."/wiki/news.txt", "r")
 	local news_fs = 'size[12,8.25]'..
 		"button_exit[-0.05,7.8;2,1;exit;Close]"
 	if news_file then

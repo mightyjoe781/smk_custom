@@ -43,6 +43,9 @@ dofile(MP.."/server_news.lua")
 -- rules
 dofile(MP.."/rules.lua")
 
+-- wiki mod
+dofile(MP.."/wiki.lua")
+
 -- maptools custmization
 if minetest.get_modpath("maptools") then
 	dofile(MP.."/maptools.lua")
@@ -51,6 +54,7 @@ end
 if minetest.get_modpath("bonemeal") then
 	dofile(MP.."/bonemeal.lua")
 end
+
 if minetest.get_modpath("beacon") then
 	-- fly check
 	dofile(MP.."/privs/fly.lua")

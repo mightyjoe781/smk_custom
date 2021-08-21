@@ -15,6 +15,8 @@ Features(Mods) Added :
   * Doesn't require server restart to update the rules.
 * Jail
   * Created a new priv called `jailer` that allows a player to jail other players.
+* Wiki Mod
+  * now you can have all info at one place using commands `/wiki`
 
 Hacks :
 
