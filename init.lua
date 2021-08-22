@@ -46,6 +46,12 @@ dofile(MP.."/rules.lua")
 -- wiki mod
 dofile(MP.."/wiki.lua")
 
+-- spawn mod
+dofile(MP.."/spawn.lua")
+
+-- functions.lua
+dofile(MP.."/functions.lua")
+
 -- maptools custmization
 if minetest.get_modpath("maptools") then
 	dofile(MP.."/maptools.lua")

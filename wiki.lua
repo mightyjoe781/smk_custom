@@ -13,34 +13,6 @@ local wiki_tab_text_2=sal .. "/rules.txt"
 local wiki_tab_text_3=sal .. "/commands.txt"
 local wiki_tab_text_4=sal .. "/news.txt"
 
--- Wiki Parser : bysmk : it parses config but doesn't recognise 
--- `\n` in txt file
-local function singlelineparser()
-    local t = {}
-    local section
-    local file_path = minetest.get_worldpath().. "/worldmods/wiki/wiki.ini"
-    local f = io.open(file_path,"r")
-    if not f then return end
-    f:close()
-    for line in io.lines(file_path) do
-        local s = line:match("^%[([^%]]+)%]$")
-        if s then
-            section = s
-            t[section] = t[section] or {}
-        end
-        local key,value = line:match("^(%w+)%s-=%s-(.+)$")
-        if key and value then
-            t[section][key] = value
-        end
-    end
-    if t then
-    wiki_tab_text_1=t['Tab1']['tabText1']
-    wiki_tab_text_2=t['Tab2']['tabText2']
-    wiki_tab_text_3=t['Tab3']['tabText3']
-    wiki_tab_text_4=t['Tab4']['tabText4']
-    end
-end
-
 function wikiparser()
     local file_path = minetest.get_worldpath().. "/wiki"
     local f1 = io.open(file_path.."/server.txt")
