@@ -44,7 +44,11 @@ dofile(MP.."/server_news.lua")
 dofile(MP.."/rules.lua")
 
 -- wiki mod
-dofile(MP.."/wiki.lua")
+if minetest.get_modpath("wiki") then
+    -- found wiki mod separately then don't override
+else
+    dofile(MP.."/wiki.lua")
+end
 
 -- spawn mod
 dofile(MP.."/spawn.lua")
