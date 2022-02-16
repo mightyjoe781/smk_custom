@@ -18,7 +18,7 @@ Features(Mods) Added :
 * Wiki Mod
   * now you can have all info at one place using commands `/wiki`
 
-Hacks :
+Hacks (from pandorabox_custom):
 
 * Softlimit Bypass for admins/moderators.
 * Sethome-Protection fix

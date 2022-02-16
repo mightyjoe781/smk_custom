@@ -46,7 +46,7 @@ local update_fly = function(player)
 	local can_fly = player_can_fly(player)
 	if use_player_monoids then
 		if player_monoids.fly:value(player) ~= can_fly then
-			player_monoids.fly:add_change(player, can_fly, "prismo_custom:fly")
+			player_monoids.fly:add_change(player, can_fly, "smk_custom:fly")
 		end
 	else
 		local privs = minetest.get_player_privs(name)

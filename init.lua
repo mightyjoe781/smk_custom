@@ -13,11 +13,13 @@ dofile(MP.."/privs/staff.lua")
 -- death message
 dofile(MP.."/death.lua")
 
+--[[
 if minetest.get_modpath("pipeworks") then
 	if pipeworks.tptube then
 		dofile(MP.."/tp_tube_fixer.lua")
 	end
 end
+--]]
 
 -- item/nodes stats
 -- dofile(MP.."/stats.lua")
@@ -73,11 +75,12 @@ if minetest.get_modpath("beacon") then
 end
 
 -- (optional multicraft fix)
---
+--[[
 minetest.register_on_joinplayer(function(player)
 	player:hud_set_hotbar_itemcount(9)
 end)
 
 minetest.override_item('', {wield_image = 'wieldhand.png'})
+--]]
 
 print("[OK] Server_Custom")
