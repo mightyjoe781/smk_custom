@@ -14,7 +14,7 @@ local tube_nodes = {
 
 -- LBM to fix broken tp tubes if/when the tube db gets corrupted
 minetest.register_lbm({
-	name = "pandorabox_custom:tp_tube_fixer",
+	name = "smk_custom:tp_tube_fixer",
 	nodenames = tube_nodes,
 	run_at_every_load = true,
 	action = function(pos)
