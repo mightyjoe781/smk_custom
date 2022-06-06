@@ -59,6 +59,12 @@ if minetest.get_modpath("beacon") then
 	dofile(MP.."/fly.lua")
 end
 
+if minetest.get_modpath("pipeworks") then
+	if pipeworks.tptube then
+		dofile(MP.."/tp_tube_fixer.lua")
+	end
+end
+
 dofile(MP.."/disallow_new_players.lua")
 
 -- (optional multicraft fix)
