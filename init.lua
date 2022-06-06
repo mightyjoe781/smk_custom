@@ -54,9 +54,6 @@ end
 -- spawn mod
 dofile(MP.."/spawn.lua")
 
--- functions.lua
-dofile(MP.."/functions.txt")
-
 -- maptools custmization
 if minetest.get_modpath("maptools") then
 	dofile(MP.."/maptools.lua")
