@@ -32,3 +32,9 @@ Hacks (from pandorabox_custom):
   * requires `fly_event` privs to use commands.
   * `/global_fly_enable` : allows to enable global fly privs.
   * `/global_fly_disable` : allows to disable global fly privs.
+
+
+License (for textures)
+
+* [Texture License](textures/license.txt)
+
