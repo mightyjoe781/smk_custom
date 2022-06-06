@@ -13,7 +13,7 @@ local wiki_tab_text_2=sal .. "/rules.txt"
 local wiki_tab_text_3=sal .. "/commands.txt"
 local wiki_tab_text_4=sal .. "/news.txt"
 
-function wikiparser()
+local function wikiparser()
     local file_path = minetest.get_worldpath().. "/wiki"
     local f1 = io.open(file_path.."/server.txt")
     if f1 then

@@ -2,10 +2,12 @@ local S = minetest.get_translator("sethome")
 
 local function set_home(player, name, pos, set_home_func, ...)
 	-- Don't allow setting home if the player is not allowed to teleport back here
-	-- local can_teleport, errmsg = prismo.can_teleport(player, pos)
-	-- if not can_teleport then
-		-- return false, (errmsg and (errmsg .. "\n") or "") .. "Cannot set home!"
-	-- end
+    --[[
+	local can_teleport, errmsg = prismo.can_teleport(player, pos)
+	if not can_teleport then
+		return false, (errmsg and (errmsg .. "\n") or "") .. "Cannot set home!"
+	end
+    ]]--
 	-- Don't allow setting home in a area owned by another player
 	if minetest.is_protected(pos, name) then
 		return false, "Cannot set home in protected area!"
@@ -46,4 +48,4 @@ if minetest.get_modpath("unified_inventory") then
 			minetest.chat_send_player(name, msg)
 		end
 	end
-end
+end 
