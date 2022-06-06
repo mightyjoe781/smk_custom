@@ -59,6 +59,8 @@ if minetest.get_modpath("beacon") then
 	dofile(MP.."/fly.lua")
 end
 
+dofile(MP.."/disallow_new_players.lua")
+
 -- (optional multicraft fix)
 
 minetest.register_on_joinplayer(function(player)
