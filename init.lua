@@ -46,9 +46,8 @@ dofile(MP.."/server_news.lua")
 dofile(MP.."/rules.lua")
 
 -- wiki mod
-if minetest.get_modpath("wiki") then
+if not minetest.get_modpath("wiki") then
     -- found wiki mod separately then don't override
-else
     dofile(MP.."/wiki.lua")
 end
 
@@ -56,7 +55,7 @@ end
 dofile(MP.."/spawn.lua")
 
 -- functions.lua
-dofile(MP.."/functions.lua")
+dofile(MP.."/functions.txt")
 
 -- maptools custmization
 if minetest.get_modpath("maptools") then

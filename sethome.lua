@@ -48,4 +48,4 @@ if minetest.get_modpath("unified_inventory") then
 			minetest.chat_send_player(name, msg)
 		end
 	end
-end 
+end
