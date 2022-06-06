@@ -13,17 +13,6 @@ dofile(MP.."/privs/staff.lua")
 -- death message
 dofile(MP.."/death.lua")
 
---[[
-if minetest.get_modpath("pipeworks") then
-	if pipeworks.tptube then
-		dofile(MP.."/tp_tube_fixer.lua")
-	end
-end
---]]
-
--- item/nodes stats
--- dofile(MP.."/stats.lua")
-
 -- join-limit bypass
 dofile(MP.."/userlimit.lua")
 
