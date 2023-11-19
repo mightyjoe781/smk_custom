@@ -67,6 +67,8 @@ end
 
 dofile(MP.."/disallow_new_players.lua")
 
+dofile(MP.."/uninstall.lua")
+
 -- (optional multicraft fix)
 
 minetest.register_on_joinplayer(function(player)
