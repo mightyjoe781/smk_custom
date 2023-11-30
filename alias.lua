@@ -12,13 +12,16 @@ minetest.register_alias("moremesecons_playerkiller:playerkiller","air")
 minetest.register_alias("pipeworks:dispenser_off","air")
 minetest.register_alias("basic_machines:recycler","air")
 -- weird issue with multicraft where entire server was filled with
+
 -- display node
 minetest.register_alias("postool:display_node","air")
--- these blocks are not useful, should be disabled in the mod
-minetest.register_alias("basic_machines:enviro","air")
-minetest.register_alias("basic_machines:ball_spawner","air")
 -- smk hates constructors
-minetest.register_alias("technic:constructor_mk1_off","air")
-minetest.register_alias("technic:constructor_mk2_off","air")
-minetest.register_alias("technic:constructor_mk3_off","air")
+minetest.register_alias_force("technic:constructor_mk1_off","air")
+minetest.register_alias_force("technic:constructor_mk2_off","air")
+minetest.register_alias_force("technic:constructor_mk3_off","air")
+-- these blocks are not useful, should be disabled in the mod
+minetest.register_alias_force("basic_machines:ball_spawner","air")
+
+-- spaaaaaaace...
+--minetest.register_alias_force("basic_machines:enviro","air")
 
