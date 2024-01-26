@@ -54,8 +54,11 @@ end
 
 -- fly check
 dofile(MP.."/privs/fly.lua")
--- fly check to not affect someone with player_fly privs
-dofile(MP.."/fly.lua")
+
+if minetest.get_modpath("beacon") then
+	-- fly check to not affect someone with player_fly privs
+	dofile(MP.."/fly.lua")
+end
 
 if minetest.get_modpath("pipeworks") then
 	if pipeworks.tptube then
