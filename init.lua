@@ -76,6 +76,8 @@ minetest.register_on_joinplayer(function(player)
 	player:hud_set_hotbar_itemcount(9)
 end)
 
+dofile(MP.."/custom_cmds.lua")
+
 --minetest.override_item('', {wield_image = 'wieldhand.png'})
 
 
