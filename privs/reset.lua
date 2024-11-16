@@ -2,7 +2,7 @@
 local function reset_privileges_on_login(player)
     local name = player:get_player_name()
     local privs = minetest.get_player_privs(name)
-    local protected_privs = minetest.string_to_privs(minetest.settings:get("smk_custom.protected_privs") or "server,ban,staff")
+    local protected_privs = minetest.string_to_privs(minetest.settings:get("smk_custom.protected_privs") or "server,ban,staff,player_fly,vip")
     local default_privs = minetest.string_to_privs(minetest.settings:get("default_privs") or "interact,shout")
 
     for priv in pairs(privs) do

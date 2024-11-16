@@ -3,7 +3,7 @@ local custom_privileges = {
     player_fly = {
         description = "can always fly",
         give_to_singleplayer = false,
-        mod_condition = "beacons", -- Register only if 'beacons' mod is installed
+        -- mod_condition = "beacons", -- Register only if 'beacons' mod is installed
     },
     fly_event = {
         description = "can toggle global fly event",

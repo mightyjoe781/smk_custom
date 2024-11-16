@@ -7,9 +7,9 @@ dofile(MP.."/alias.lua")
 dofile(MP.."/fix_dead_on_login.lua")
 
 -- add new/modified commands to server
-dofile(MP.."/cmds/who.lua")
-dofile(MP.."/cmds/spawn.lua")
-dofile(MP.."/cmds/reboot.lua")
+dofile(MP.."/cmd/who.lua")
+dofile(MP.."/cmd/spawn.lua")
+dofile(MP.."/cmd/reboot.lua")
 
 -- priv management
 dofile(MP.."/privs/register.lua")
@@ -44,6 +44,10 @@ if not minetest.get_modpath("wiki") then
     dofile(MP.."/wiki.lua")
 end
 
+-- if minetest.get_modpath("beacon") then
+-- -- 	-- fly check to not affect someone with player_fly privs
+	dofile(MP.."/fly.lua")
+-- end
 
 -- maptools custmization
 if minetest.get_modpath("maptools") then
