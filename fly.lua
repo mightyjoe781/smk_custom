@@ -28,12 +28,16 @@ end
 --  true = manipulate fly privs
 --  false = no manipulation on privs
 local do_fly_priv_manipulation = function(name)
-	local privs = minetest.get_player_privs(name)
-	local player_is_admin = privs.privs
-	local player_can_always_fly = privs.player_fly
-
-	-- not touching admin privs
-	return not player_is_admin and not player_can_always_fly
+    local privs = minetest.get_player_privs(name)
+    local protected_privs = minetest.string_to_privs(
+        minetest.settings:get("smk_custom.protected_privs") or "privs,server,ban,staff,player_fly,vip"
+    )
+    for priv, _ in pairs(privs) do
+        if protected_privs[priv] then
+            return false
+        end
+    end
+    return true
 end
 
 local update_fly = function(player)
