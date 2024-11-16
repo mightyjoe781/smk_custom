@@ -1,0 +1,1 @@
+smk_custom.protected_privs (List of protected privs in server)  string 

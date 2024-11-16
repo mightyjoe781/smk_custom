@@ -6,8 +6,13 @@ dofile(MP.."/alias.lua")
 -- death fix stuff (Block City Server)
 dofile(MP.."/fix_dead_on_login.lua")
 
--- privilages
-dofile(MP.."/privs/staff.lua")
+-- add new commands to server
+dofile(MP.."/cmd/who.lua")
+
+-- privilages, management
+dofile(MP.."/privs/register.lua")
+dofile(MP.."/privs/reset.lua")
+
 -- dofile(MP.."/privs/protection.lua")
 
 -- death message
@@ -52,13 +57,6 @@ if minetest.get_modpath("bonemeal") then
 	dofile(MP.."/bonemeal.lua")
 end
 
--- fly check
-dofile(MP.."/privs/fly.lua")
-
-if minetest.get_modpath("beacon") then
-	-- fly check to not affect someone with player_fly privs
-	dofile(MP.."/fly.lua")
-end
 
 if minetest.get_modpath("pipeworks") then
 	if pipeworks.tptube then
@@ -76,7 +74,6 @@ minetest.register_on_joinplayer(function(player)
 	player:hud_set_hotbar_itemcount(9)
 end)
 
-dofile(MP.."/custom_cmds.lua")
 
 --minetest.override_item('', {wield_image = 'wieldhand.png'})
 
