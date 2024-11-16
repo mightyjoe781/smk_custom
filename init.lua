@@ -6,10 +6,12 @@ dofile(MP.."/alias.lua")
 -- death fix stuff (Block City Server)
 dofile(MP.."/fix_dead_on_login.lua")
 
--- add new commands to server
-dofile(MP.."/cmd/who.lua")
+-- add new/modified commands to server
+dofile(MP.."/cmds/who.lua")
+dofile(MP.."/cmds/spawn.lua")
+dofile(MP.."/cmds/reboot.lua")
 
--- privilages, management
+-- priv management
 dofile(MP.."/privs/register.lua")
 dofile(MP.."/privs/reset.lua")
 
@@ -30,9 +32,6 @@ dofile(MP.."/recipes.lua")
 -- craft overrides
 dofile(MP.."/crafts.lua")
 
--- server-reboot
-dofile(MP.."/reboot.lua")
-
 -- server_news
 dofile(MP.."/server_news.lua")
 
@@ -45,8 +44,6 @@ if not minetest.get_modpath("wiki") then
     dofile(MP.."/wiki.lua")
 end
 
--- spawn mod
-dofile(MP.."/spawn.lua")
 
 -- maptools custmization
 if minetest.get_modpath("maptools") then
