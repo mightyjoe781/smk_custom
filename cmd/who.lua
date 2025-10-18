@@ -1,10 +1,10 @@
-
 -- Register the /who command if irc_commands is not installed
-if not minetest.get_modpath("irc_commands") then
-    minetest.register_chatcommand("who", { description = "Displays all online players",
-        privs = {shout = true},
+if not core.get_modpath("irc_commands") then
+    core.register_chatcommand("who", {
+        description = "Displays all online players",
+        privs = { shout = true },
         func = function(name)
-            local players = minetest.get_connected_players()
+            local players = core.get_connected_players()
 
             local player_names = {}
             for _, player in ipairs(players) do

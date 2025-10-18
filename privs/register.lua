@@ -3,7 +3,7 @@ local custom_privileges = {
     player_fly = {
         description = "can always fly",
         give_to_singleplayer = false,
-        -- mod_condition = "beacons", -- Register only if 'beacons' mod is installed
+        mod_condition = "beacons", -- Register only if 'beacons' mod is installed
     },
     fly_event = {
         description = "can toggle global fly event",
@@ -35,6 +35,6 @@ for priv_name, priv_def in pairs(custom_privileges) do
         })
         -- minetest.log("action", "Registered privilege '" .. priv_name .. "'")
     else
-        minetest.log("action", "Skipped privilege '" .. priv_name .. "' (requires mod '" .. mod_required .. "')")
+        minetest.log("info", "[smk_custom] Skipped privilege '" .. priv_name .. "' (requires mod '" .. mod_required .. "')")
     end
 end
